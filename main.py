@@ -1,13 +1,23 @@
 import turtle
 import math
 
-STEPS_PER_2PI = 100
-RADS_PER_STEP = (2 * math.pi) / STEPS_PER_2PI
-SIM_STEPS = 20000
+'''
+Simulation Parameters
+'''
+RESOLUTION = 50  # Higher number gives a higher resolution, but runs slower
+SIM_STEPS = 20000  # How many total steps to run
+RADS_PER_STEP = (2 * math.pi) / RESOLUTION  # Don't change
 
-R = 400
-r = 205
-p = 50
+
+''' 
+Spirograph Parameters
+    In reality, p < r < R
+    In this simulation, feel free to play
+    with values that don't conform to that!
+'''
+R = 400  # Radius of outer ring
+r = 205  # Radius of inner cog
+p = 50  # Distance between pen hole and center of inner cog
 
 
 def main():
@@ -19,7 +29,7 @@ def main():
     T = 0
     t = 0
     for _ in range(SIM_STEPS):
-        T = T + RADS_PER_STEP
+        T += RADS_PER_STEP
         t = -((R - r) / r) * T
         x_c = (R - r) * math.cos(T)
         y_c = (R - r) * math.sin(T)
@@ -30,7 +40,7 @@ def main():
 
         turtle.goto((x, y))
 
-    input()
+    input("Press enter to exit")
 
 
 if __name__ == "__main__":
