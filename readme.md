@@ -7,7 +7,7 @@ to get the function for the path.
 ### How to manipulate
 
 Mainly you will want to manipulate the values `R`, `r`, and `p` which
-are in the "Spirograph Parameters" section near the top of [main.py].
+are in the "Spirograph Parameters" section near the top of [main.py](./main.py).
 They correspond to the radius of the outer ring, the radius of the
 inner cog, and the distance from the pen hole to the center of the
 inner cog. See what you can make!
